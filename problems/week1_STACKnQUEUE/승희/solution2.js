@@ -7,7 +7,7 @@ function solution(progresses, speeds) {
     
     var leftDays = [];
     for (var i = 0; i<progresses.length; i++) {
-        leftDays.push((100-progresses[i])/speeds[i]);
+        leftDays.push(Math.ceil((100-progresses[i])/speeds[i]));
     }
     var count = 1;
     var max = leftDays[0];
@@ -20,6 +20,7 @@ function solution(progresses, speeds) {
             max = leftDays[i];
         }
     }
+    
     answer.push(count);
     
     return answer;
