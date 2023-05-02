@@ -12,6 +12,7 @@ function solution(participant, completion) {
 		}
 		continue;
 	}
+	//반환 형태가 문자열이 되도록 변환
 	answer = participant.toString();
 	return answer;
 }
