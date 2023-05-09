@@ -21,22 +21,41 @@
 - 풀이를 여러 번 엎었는데 계속 똑같아서 이후에 맞는 풀이를 찾아봤습니다.
 
 ```javascript
-ffunction solution(citations) {
-    let answer = 0;
+function solution(citations) {
+	let answer = 0;
 
-    //인용 횟수 기준으로 내림차순으로 정렬하고
-    citations.sort((a, b) => b - a);
+	//인용 횟수 기준으로 내림차순으로 정렬하고
+	citations.sort((a, b) => b - a);
 
-    let i = 0;
-    //11, 13 테스트케이스 빼고 계속 실패가 떠서 한참 고쳤는데, h가 citation 원소일 필요가 없었다는 걸 뒤늦게 알았다..
-    //근데 새로 안 저 사실에 너무 매몰되어서 문제 잘못 이해하고 계속 잘못 접근했다가 원래 처음에 생각한 접근이 더 정답에 가깝다는 것을 알았다..!ㅠㅠ
-    //정렬된 배열에서 h 이후에 오는 원소의 개수가 h개 이상인 첫 요소가 H-Index이다.
-    while(i < citations.length){
-        if(citations[i] <= i + 1){
-            answer = citations[i];
-            return answer;
-        }
-            i++;
-    }
+	let i = 0;
+	//11, 13 테스트케이스 빼고 계속 실패가 떠서 한참 고쳤는데, h가 citation 원소일 필요가 없었다는 걸 뒤늦게 알았다..
+	//근데 새로 안 저 사실에 너무 매몰되어서 문제 잘못 이해하고 계속 잘못 접근했다가 원래 처음에 생각한 접근이 더 정답에 가깝다는 것을 알았다..!ㅠㅠ
+	//정렬된 배열에서 h 이후에 오는 원소의 개수가 h개 이상인 첫 요소가 H-Index이다.
+	while (i < citations.length) {
+		if (citations[i] <= i + 1) {
+			answer = citations[i];
+			return answer;
+		}
+		i++;
+	}
 }
 ```
+
+제 풀이와 비슷하게 접근했는데 정답인 풀이는 아래와 같았습니다.
+
+```javscript
+function solution(citations) {
+    citations.sort((a, b) => b - a);
+    let i = 0;
+    while (i + 1 <= citations[i]) {
+        i++;
+    }
+    return i;
+
+}
+```
+
+위 풀이의 경우 i로 반환할 정답을 바로 찾아 반환하기 때문에 효율적이라고 느껴졌고, 제가 반대로 생각해서 더 복잡해졌다는 것을 알 수 있었습니다. 저는 내림차순으로 정렬된 배열을 앞에서부터 돌면서 h(citations[i])번 인용된 논문이 i+1개이므로 i+1이 h 이상인 순간이 되는 첫 요소가 최대인 H-Index라고 생각했습니다.
+<br/>
+정답 풀이의 경우, h(citations[i])번 이상 인용된 논문 개수가 i+1이 h개보다 작거나 같을 때까지 i를 계속 늘려서 탈출했을 때의 i를 반환하는 방식으로 해결했습니다.
+정답 풀이를 이해했지만 아직 제 원래 풀이가 어떤 부분에서 문제가 되는지 완전히 이해하지 못해서 코드리뷰 할 때 이 부분 봐주시면 감사할 것 같아요..!🥲
