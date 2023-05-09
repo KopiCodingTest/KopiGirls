@@ -26,6 +26,8 @@
 <br/>
 
 ## 💡 Solution
+- 한줄 정리 : array[i-1]~array[j-1]까지 자르고 -> 정렬 후 -> [k-1]요소 get하기
+- 정렬 방식은 단순 오름차순이기 때문에 arr.sort() 사용
 ### ✔️ **logic**
 
 1. array [i-1]~[j-1] 자르기 
