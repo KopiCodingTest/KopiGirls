@@ -43,5 +43,5 @@ function solution(nums) {
 ## 📚참고 자료
 
 [[자바스크립트]배열에서 중복 요소 제거 방법들](https://sisiblog.tistory.com/313, https://hianna.tistory.com/422)
-[[자바스크립트]나눗셈 몫, 나머지 구하기] (https://chancoding.tistory.com/237)
+[[자바스크립트]나눗셈 몫, 나머지 구하는 방법] (https://chancoding.tistory.com/237)
 <br />
