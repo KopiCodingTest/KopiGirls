@@ -1,14 +1,15 @@
-function solution(array, commands) {
-    var answer = [];
+function solution(citations) {
+    var answer = 0;
     
-    commands.forEach(command => {
-        let [start, end, index] = command;
-        
-        let portion = array.slice(start-1,end);         // 1.
-        portion.sort((a,b) => a-b);               // 2.
-        answer.push(portion[index-1]);    // 3.
-    }) 
+	  citations.sort((a,b)=>a-b);   // 1.
+    let n = citations.length;
     
+    for (let i=0; i<n; i++) {    // 2.
+        if (citations[i]>=n-i) {    
+            answer = n-i;
+            break;
+        }
+    }
     
     return answer;
 }
