@@ -20,36 +20,31 @@
 
 중요한 **시간 복잡도!**
 
-<aside>
-💡 **시간 복잡도**를 고려한다?  
+> 💡 **시간 복잡도**를 고려한다?  
 **⇒ 프로그램의 입력값과 연산 수행 시간의 상관관계를 나타내는 지표**
 
-</aside>
 
-O(n^2)
+ex- O(n^2), O(nlogn)
 
-O(nlogn)
-
-<aside>
-💡 **빅오 표기법? 
+> 💡 **빅오 표기법? 
 👉 시간 복잡도를 표기하는 방법, “최악의 경우!!”**
+<img width="500" alt="image" src="https://github.com/KopiCodingTest/KopiGirls/assets/81505421/6edb4680-55c7-4d36-b220-ff88005289f6">
 
-![스크린샷 2023-05-03 오전 1.42.34.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/798dd4b0-a987-47be-8548-2c4c7fa60020/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2023-05-03_%EC%98%A4%EC%A0%84_1.42.34.png)
 
-</aside>
+
 
 ## Insertion Sort
 
 - 두번째 요소부터 시작
 - 앞부분이 **정렬된 부분 배열**이 됨 (가장 초기에 첫번째 요소가 정렬된 배열이라고 여김)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9aa911c8-e87c-4b86-9c83-57cb41d298c8/Untitled.png)
+![image-2](https://github.com/KopiCodingTest/KopiGirls/assets/81505421/a3c86b74-eb77-41e1-a042-df71f17c9c46)
 
 ## Selection Sort
 
 - 배열 중 최솟값을 찾아서 맨앞 요소와 **교체**
+![image-3](https://github.com/KopiCodingTest/KopiGirls/assets/81505421/49f80220-6537-4fc0-8bc7-9f0c85bf614b)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/27247e5d-d691-4357-afcc-615b9de5ab20/Untitled.png)
 
 ## Bubble sort
 
@@ -60,9 +55,10 @@ O(nlogn)
 - 가장 큰 원소가 오른쪽부터 정렬됨
 - 데이터가 하나씩 정렬(완성)되면서 비교할 요소에서 제외됨
 
-![스크린샷 2023-05-03 오전 1.49.02.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/58b8484a-ef26-4201-aa96-aec10a1e0b36/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2023-05-03_%EC%98%A4%EC%A0%84_1.49.02.png)
+<img width="500" alt="image-4" src="https://github.com/KopiCodingTest/KopiGirls/assets/81505421/874cca7e-0f00-4f62-bd21-58942b71b736">
 
-![스크린샷 2023-05-03 오전 1.50.26.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/13a35da5-802a-4986-b84e-7f52a68f65fa/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2023-05-03_%EC%98%A4%EC%A0%84_1.50.26.png)
+<img width="500" alt="image-5" src="https://github.com/KopiCodingTest/KopiGirls/assets/81505421/e92f5882-868d-4be6-a0d9-e1f3af804ef8">
+
 
 ### 버블 정렬의 한계점
 
@@ -84,8 +80,7 @@ O(nlogn)
 
 - **분할 정복** 방식 : Divide and Conquer
 
-<aside>
-💡 **Divide & Conquer?** 
+> 💡 **Divide & Conquer?** 
 - 한번에 해결할 수 없는 문제를 작은 문제로 분할하여 해결하는 알고리즘
 - 주로 재귀 함수로 구현
 - 크게 3단계로 이루어짐 
@@ -93,37 +88,24 @@ O(nlogn)
   2. Conquer : 쪼개진 작은 문제 해결 
   3. Combine : 해결된 작은 문제들 다시 합침
 
-</aside>
-
-![스크린샷 2023-05-03 오전 1.57.50.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/357470c7-7f85-4740-9d63-93b2854d4aa9/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2023-05-03_%EC%98%A4%EC%A0%84_1.57.50.png)
 
 - 분할
-
-![스크린샷 2023-05-03 오전 1.58.03.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2f48dd34-d287-4124-a926-87e76652b2f4/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2023-05-03_%EC%98%A4%EC%A0%84_1.58.03.png)
+- <img width="400" alt="image-6" src="https://github.com/KopiCodingTest/KopiGirls/assets/81505421/da4fa512-d1d8-4d11-8066-c3e297bdb095">
 
 - 정복
+- <img width="400" alt="image-7" src="https://github.com/KopiCodingTest/KopiGirls/assets/81505421/b1596301-c7f6-458f-851e-cb484f7fabad">
+
 
 - Divide : 하나의 입력 배열을 반으로 나눈다.
 - **Conquer : 나눈 각 배열들을 정렬한다**
 - **Merge : 다시 하나의 배열로 합친다**
 
 ### How to Merge?
+<img width="500" alt="image-8" src="https://github.com/KopiCodingTest/KopiGirls/assets/81505421/f261a8e4-322f-4df3-b47c-e34822afc2fd">
 
-![스크린샷 2023-05-03 오전 2.01.44.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/10325857-25b7-4789-a790-3c28adddde23/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2023-05-03_%EC%98%A4%EC%A0%84_2.01.44.png)
 
 ### 합병 정렬의 시간 복잡도 → O(nlogn)
-
-![스크린샷 2023-05-03 오전 2.03.09.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0cad5bfb-82c7-4efb-b689-b0bc9703b3e8/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2023-05-03_%EC%98%A4%EC%A0%84_2.03.09.png)
-
-여덟개라면?
-
-ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ
-
-ㅇ ㅇ ㅇ ㅇ
-
-          ㅇ                  ㅇ
-
-                    ㅇ
+<img width="500" alt="image-9" src="https://github.com/KopiCodingTest/KopiGirls/assets/81505421/7f9c5d97-416a-4270-bda2-7f34ddfb54f3">
 
 ---
 
